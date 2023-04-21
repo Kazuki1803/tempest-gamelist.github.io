@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Star Tower Defense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    var webhookUrl = "https://discord.com/api/webhooks/1098669525903351899/Y83nPcqlTLSQUSpgFKAgAv_29XaS37tjfp4SZRMUda9hvGC5pjMA9rA56qOcOOvC83DX";
+
+    $.getJSON(webhookUrl, function(data) {
+        $.each(data, function(key, val) {
+            if(val.author) {
+                $("#astd-news").append('<div><strong>' + val.author.username + '</strong>: ' + val.content + '<br></div>');
+            }
+        });
+    });
+});
+</script>
+
+
+<nav id="nav_main">
+    <a id="a_start" href="index.html">Start</a>
+    <a id="a_astd" href="#">All Star Tower Defense</a>
+</nav><br><br>
+
+<div class="astd_main">
+
+    <div id="astd-news">
+        <h3 id="h3_astd">ASTD News</h3>
+    </div>
+    <div id="astd-codes">
+        <h3 id="h3_astd">ASTD Codes</h3>
+        <ul>
+            <li><h4>ASTDEggOpenedFinally | 100 stardust, 2,750 gems, and 1,000 gold</h4></li>
+            <li><h4>Chainsmoke91 | Random Amount of Stardust</h4></li>
+        </ul>
+    </div>
+
+    <iframe src="https://docs.google.com/spreadsheets/d/1Z20NUscF9Id2Sss-osT-Xq06gz9ooikt6Kjtianeg0I/htmlview?usp=sharing#" id="google_docs_style" frameborder="100">test</iframe>
+
+    <footer>
+        <div class="container">
+          <div class="footer-info">
+            <p><a href="https://discord.gg/dPUDNZr6RQ">Discord-Link</a></p>
+            <p id="made_by">Made by @Kazuki183#9055</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+
+</body>
+</html>
